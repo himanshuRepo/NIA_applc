@@ -1,0 +1,27 @@
+function [Chromosome,Fitness] = Selection(PopulationSize,Chromosome,Fitness)
+TempChromosome = zeros(20,100);
+TempFitness=zeros(1,20);
+for IndividualCounter=1:1:PopulationSize 
+    %Generating Random Nomber Between 1 and 20
+    temp1=round(rand *(PopulationSize-1)+1);
+    temp2=round(rand *(PopulationSize-1)+1);
+    %Using turnment Selection to Select the Indivitual With Minimum Fitness
+    if(Fitness(temp1) < Fitness(temp2))
+        for i=1:1:NumberOfNodes
+             TempChromosome(IndividualCounter,i)= Chromosome(temp1,i);
+             
+        end;
+
+        
+    else
+        TempIndividual(IndividualCounter).chromosome=Individual(temp2).chromosome;
+        TempIndividual(IndividualCounter).Fitness=Individual(temp2).Fitness;
+
+    end;
+    
+end;
+
+for IndividualCounter=1:1:PopulationSize
+    Individual(IndividualCounter).chromosome=TempIndividual(IndividualCounter).chromosome;
+    Individual(IndividualCounter).Fitness=TempIndividual(IndividualCounter).Fitness;
+end;

@@ -1,0 +1,7 @@
+function [PopulationSize,MaxIteration,Pc,Pm] = InitilizeEA()
+PopulationSize=20;
+MaxIteration=20;
+%Crosso
+Pc=0.6;
+
+Pm=0.03;

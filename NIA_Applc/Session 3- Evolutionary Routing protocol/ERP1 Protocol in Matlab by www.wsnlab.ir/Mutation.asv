@@ -1,0 +1,13 @@
+function [Indivitual] = Mutation(PopulationSize,Indivitual,Pm,NumberOfNodes)
+
+
+for IndivitualCounter=1:1:PopulationSize
+    
+    for SensorCounter=1:1:NumberOfNodes
+        
+        if (( Indivitual(IndivitualCounter).chromosome(SensorCounter)~=-1)&&(rand<=Pm))
+            Indivitual(IndivitualCounter).chromosome(SensorCounter)=abs(Indivitual(IndivitualCounter).chromosome(SensorCounter)-1);
+       
+        end;
+   end;
+end;
