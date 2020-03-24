@@ -1,2 +1,2 @@
-# NIA_applc
-Nature Inspired Algorithms with Applications
+# Nature Inspired Algorithms with Applications
+Content of workshop at JIMS, Delhi 
